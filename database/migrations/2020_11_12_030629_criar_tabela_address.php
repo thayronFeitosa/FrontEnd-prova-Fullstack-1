@@ -22,7 +22,7 @@ class CriarTabelaAddress extends Migration
             $table->string('complement');
             $table->timestamps();
             $table->integer('user_id')->unsigned();	
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
 
         });
     }

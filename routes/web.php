@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->post('user', 'UserController@store');
+    $router->get('user', 'UserController@index');
+    $router->get('user/{id}', 'UserController@show');
+    $router->put('user/{id}', 'UserController@update');
+    $router->delete('user/{id}', 'UserController@destroy');
+});
