@@ -24,3 +24,5 @@ $router->group(['prefix' => 'api','middleware' => 'auth'], function () use ($rou
     $router->put('user/{id}', 'UserController@update');
     $router->delete('user/{id}', 'UserController@destroy');
 });
+
+$router->post('/api/login', 'TokenController@gerarToken');
