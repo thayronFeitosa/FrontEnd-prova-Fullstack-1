@@ -15,4 +15,9 @@ class User extends Model
         return $this->hasMany(User::class);
     }
 
+    public function telephones(): HasMany
+    {
+        return $this->hasMany(Telephone::class);
+    }
+
 }

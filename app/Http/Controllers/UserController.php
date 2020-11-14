@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Telephone;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-  
 
     public function index(){
         try{
@@ -18,8 +18,9 @@ class UserController extends Controller
       
     }
 
-    public function store(Request $request){
+    public function  store(Request $request) {
         try{
+           
 
             return response()->json( User::create($request->all()), 201);
         }catch(\Exception $e){
@@ -32,12 +33,14 @@ class UserController extends Controller
     public function show(int $id)
     {
         try{
-            $user = User::find($id);
-            if(is_null($user)){
+            $results = app('db')->select("SELECT * FROM users where id =".$id);
+
+            if(sizeof($results) ===0){
                 return response()->json( '', 204);
     
             }
-            return   response()->json( $user,);
+            return response()->json( $results, 201);
+
         }catch(\Exception $e){
         
             return response()->json( $e, 400);
