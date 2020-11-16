@@ -50,7 +50,7 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
             JWT_SECRET=w66eSGm0UwTv0mUl9Wf1wSKiREAth2F5Y91PccPCWig1Alv0Pa2yNLzKQEs3bZy
         ```
         
-   <p>Feito as configurações iniciar basta rodar o comando <strong>composer install</strong> <br><br>
+   <p>Feito as configurações iniciais basta rodar o comando <strong>composer install</strong> <br><br>
     <h3>Criando tabelas no banco de dados</h3>
         Feitos todos os passos agora e so criar as tabelas no banco de dados usando o comando:<br>
       <ul>
