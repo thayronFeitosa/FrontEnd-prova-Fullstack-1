@@ -58,6 +58,10 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
     </ul>
    
    </p>
+   <h3>Observaçes<h3>
+    <p>
+        Para que o front end consiga se conectar, o back-end deverá estar na porta 8080
+    </p>
 </p>
 
 ## Official Documentation
