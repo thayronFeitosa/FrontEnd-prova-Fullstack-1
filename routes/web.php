@@ -2,27 +2,28 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+$router->post('register', 'UserController@store');
+$router->post('login', 'Auth\LoginController@login');
 
-$router->get('/', function () use ($router) {
+$router->group(['middleware' => 'auth'], function ($router) {
+    $router->get('me', 'Auth\AuthController@me');
+    $router->post('refresh', 'Auth\AuthController@refresh');
+    $router->post('logout', 'Auth\LoginController@logout');
+
+    $router->group(['prefix' => 'users'], function ($router) {
+        $router->get('', 'UserController@index');
+        $router->get('{id}', 'UserController@show');
+        $router->put('{id}', 'UserController@update');
+    });
+
+
+    $router->group(['prefix' => 'address'], function ($router) {
+        $router->get('', 'UserController@index');
+        $router->get('{id}', 'UserController@show');
+        $router->put('{id}', 'UserController@update');
+    });
+});
+
+$router->get('', function () use ($router) {
     return $router->app->version();
 });
-
-$router->group(['prefix' => 'api','middleware' => 'auth'], function () use ($router) {
-    $router->post('user', 'UserController@store');
-    $router->get('user', 'UserController@index');
-    $router->get('user/{id}', 'UserController@show');
-    $router->put('user/{id}', 'UserController@update');
-    $router->delete('user/{id}', 'UserController@destroy');
-});
-
-$router->post('/api/login', 'TokenController@gerarToken');

@@ -5,13 +5,21 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Telephone extends Model
+class Address extends Model
 {
 
-    protected $fillable = ['number', 'user_id'];
+    protected $fillable = [
+        'street',
+        'city',
+        'state',
+        'number',
+        'neighborhood',
+        'complement',
+        'user_id',
+    ];
 
     /**
-     * returns the user that the telephone belongs to
+     * returns the user that the address belongs to
      *
      * @return BelongsTo
      */
