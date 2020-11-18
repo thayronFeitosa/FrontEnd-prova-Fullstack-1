@@ -1,0 +1,147 @@
+
+#cadastro-user-row{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.content-box {
+   width: 100%;
+   height: 100%;
+   text-align:center;
+   background-color: rgba(10, 23, 58, 0.9);
+   color: white;
+   
+   
+   /* pura mágica */
+   position: absolute;
+
+ }
+#cadatro-image{
+   width: 600px;
+   min-width: 300px;
+}
+
+
+#cadastro-user-form {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+
+}
+#formulario {
+   margin-top: 10%;
+   width: 80%;
+ 
+}
+
+
+#cadastro-user-endereco-label
+ 
+ #cadastro-user-dados-pessoais-label, #cadastro-user-endereco-label, #cadastro-user-password-label{
+   margin-bottom: 5px;
+   margin-top: 40px;
+   align-items: center;
+   
+   
+}
+
+#cadastro-user-form label{
+   font-size: 40px;
+   box-shadow: 4px 4px 5px rgb(29, 141, 54);
+  
+  
+}
+
+ #cadastro-user-name input{
+    width: 980px;
+    height: 35px;
+    font-size: 18px;
+    margin: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color:white;
+    box-shadow: 1 0 0 0;
+    color: #FFFF;
+    
+}
+ #input-address{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+ #cadastro-user-endereco input{
+  
+   height: 35px;
+   margin: 5px;
+   border-radius: 5px;
+   border-color:white;
+   box-shadow: 1 0 0 0;
+   color: #FFFF;
+
+}
+
+ #cadastro-user-p2 input , #cadastro-user-password input, #cadastro-user-password input{
+   height: 35px;
+   font-size: 15px;
+   width: 230px;
+   margin: 5px;
+   border-radius: 5px; 
+   border-color:white;
+   box-shadow: 1 0 0 0;
+   color: #FFFF;
+
+
+}
+
+ #enviar-cadastro{
+   margin: 15px;
+   height: 40px;
+   width: 150px;
+   color: #ffff;
+   background-color:  #006600;
+   border-radius: 5px;
+   border: 0 none;
+}
+
+ #enviar-cadastro:hover{
+   border: 0 none;
+   margin: 15px;
+   height: 45px;
+   width: 155px;
+   background-color:  #108a10;
+
+   color: #ffff;
+   border-radius: 5px;
+
+}
+
+#enviar-cadastro:focus,input:focus {
+   box-shadow: 1 0 0 0;
+   outline: 0
+
+}
+
+#cancelar{
+   margin: 15px;
+   height: 40px;
+   width: 150px;
+   color: #ffff;
+   text-align: center;
+   background-color:  #d12d04;
+   border-radius: 5px;
+   border: 0 none;
+}
+
+
+#cancelar:hover{
+ margin: 15px;
+   height: 45px;
+   width: 155px;
+   width: 150px;
+   color: #ffff;
+   text-align: center;
+   background-color:  #c03613;
+   border-radius: 5px;
+
+}
